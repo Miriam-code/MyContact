@@ -22,7 +22,7 @@ export const getContacts = async () => {
   const token = localStorage.getItem("token"); 
   return await axios({
     method: 'get',
-    url: `http://localhost:3000/contact/all`,headers: {
+    url: `${API_URL}/contact/all`,headers: {
       Authorization: `Bearer ${token}`,
     },
   })

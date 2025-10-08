@@ -5,7 +5,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 export const registerUser = async (data) => {
   return await axios({
     method: 'post',
-    url: `http://localhost:3000/user/register`,
+    url: `${API_URL}/user/register`,
     data: data,
   })
     .then((res) => {
@@ -39,7 +39,7 @@ export const loginUser = async (data) => {
 export const getUserInfo = async (token) => {
   return await axios({
     method: 'get',
-    url: `http://localhost:3000/user/me`,
+    url: `${API_URL}/user/me`,
     headers: {
       Authorization: `Bearer ${token}`,
     },
