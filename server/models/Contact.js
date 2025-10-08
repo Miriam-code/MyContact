@@ -1,11 +1,22 @@
+import mongoose from "mongoose";
+
 const contactSchema = new mongoose.Schema(
   {
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
-    phone: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    image: { type: String, default: null },
-    is_admin: { type: Boolean, default: false },
+    phone: {
+      type: String,
+      required: true,
+      validate: {
+        validator: (v) => v.length >= 10 && v.length <= 20,
+        message: (props) => `${props.value} n'est pas un numéro de téléphone valide`,
+      },
+    },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    }
   },
   { timestamps: true }
 );
