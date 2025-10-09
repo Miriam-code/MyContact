@@ -142,14 +142,6 @@ Frontend runs on: **http://localhost:5173**
 | `PUT` | `/contact/:id` | Update a contact | ✅ |
 | `DELETE` | `/contact/:id` | Delete a contact | ✅ |
 
-### Interactive API Documentation
-
-Full Swagger documentation available at:
-- **Local:** [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
-- **Production:** [https://mycontact-backend-chlz.onrender.com/api-docs](https://mycontact-backend-chlz.onrender.com/api-docs)
-
----
-
 ## 🧪 Testing
 
 The project includes comprehensive Jest test suites for both user and contact controllers.
