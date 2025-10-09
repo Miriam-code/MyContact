@@ -10,8 +10,8 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000/users",
-        description: "Serveur local",
+        url: "https://mycontact-backend-chlz.onrender.com",
+        description: "Serveur backend",
       },
     ],
     components: {
