@@ -8,6 +8,7 @@ const saltRounds = 10;
 const regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
 export default {
+  
   register: async (req, res) => {
     try {
       const { lastName, firstName, phone, email, password } = req.body;

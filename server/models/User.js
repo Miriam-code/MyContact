@@ -8,10 +8,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       validate: {
-        validator: (v) => v.length >= 10 && v.length <= 20,
+        validator: (v) => v.length >= 10 && v.length <= 12,
         message: (props) =>
           `${props.value} n'est pas un numéro de téléphone valide`,
       },
+      unique: true,
     },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
