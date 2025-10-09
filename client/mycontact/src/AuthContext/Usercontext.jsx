@@ -13,7 +13,6 @@ const UserProvider = ({ children }) => {
     await getUserInfo(token)
       .then((data) => {
         setUser(data);
-        console.log("data context user", data )
       })
       .catch((e) => {
         console.log(e);
@@ -23,6 +22,7 @@ const UserProvider = ({ children }) => {
   const logoutUser = () => {
     setUser(null);
     localStorage.removeItem('token');
+
   };
 
 
